@@ -1,0 +1,45 @@
+<div class="main">
+    <div class="display-1">My Cart Items</div>
+
+<div *ngFor="let items of item">
+   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+   <!------ Include the above in your HEAD tag ---------->
+   
+   <div class="col-md-2 column productbox">
+       <img src="{{items.photo}}" class="img-responsive">
+       <div class="producttitle">{{items.name}}</div>
+       <div class="productprice"><div class="pull-right"><a (click)="buy_api()" class="btn btn-success btn-sm" role="button">BUY</a></div><div class="pricetext">{{items.price}} Rs</div></div>
+       <button class="btn btn-danger btn-sm pull-right" (click)="clearCart(items)">Remove from cart</button>
+
+    </div>
+   </div>
+<div *ngFor="let items of chat">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    
+    <div class="col-md-2 column productbox">
+        <img src="{{items.cimage}}" class="img-responsive">
+        <div class="producttitle">{{items.cname}}</div>
+        <div class="productprice"><div class="pull-right"><a (click)="buy_api()" class="btn btn-success btn-sm" role="button">BUY</a></div><div class="pricetext">{{items.cprice}} Rs</div></div>
+        <button class="btn btn-danger btn-sm pull-right" (click)="clearchat(items)">Remove from cart</button>
+
+    </div>
+    </div>
+    <div *ngFor="let items of pro">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!------ Include the above in your HEAD tag ---------->
+        
+        <div class="col-md-2 column productbox">
+            <img src="{{items.productImage}}" class="img-responsive">
+            <div class="producttitle">{{items.productname}}</div>
+            <div class="productprice"><div class="pull-right"><a (click)="buy_api()" class="btn btn-success btn-sm" role="button">BUY</a></div><div class="pricetext">{{items.productprice}} Rs</div></div>
+        <button class="btn btn-danger btn-sm pull-right" (click)="clearpro(items)">Remove from cart</button>
+        </div>
+        </div>
+ </div>

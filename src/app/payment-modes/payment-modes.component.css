@@ -1,0 +1,19 @@
+.main{
+    animation: 5s change-bg-color infinite ;
+    width:100%;
+    height:555px;
+    border: 1px solid black;
+    margin-top: -70px;
+   }
+   
+   @keyframes change-bg-color {
+       0% {
+           background-color: #814472;
+         }
+         50% {
+           background-color: #2474b6;
+         }
+         100% {
+           background-color: #127586;
+         }
+   }

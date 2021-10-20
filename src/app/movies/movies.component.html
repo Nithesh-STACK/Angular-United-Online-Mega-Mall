@@ -1,0 +1,39 @@
+<html lang="en">
+  
+
+
+    
+<head>
+
+  <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+  <div class="wrapper" *ngFor="let item of booking">
+    <div class="Movie-img">
+      <img src="{{item.moviePoster}}" height="420" width="327">
+    </div>
+    <div class="Movie-info">
+      <div class="Movie-text">
+        <h1> {{item.movieName}}
+        </h1>
+        
+        <p>                     {{item.movieDescription}} 
+        <p>
+          <div class="Movie-price-btn">
+            <p>₹<span>{{item.price}}</span></p>
+
+            <button (click)="online_api(item)" type="button">Book Ticket</button>
+    
+          </div>
+       </div>
+     
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

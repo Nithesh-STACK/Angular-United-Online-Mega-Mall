@@ -1,0 +1,78 @@
+<meta charset="utf-8">
+ <title>Firstprj</title> 
+ <style>
+   .display-1 {
+     font-size: 70px;
+      position: absolute;
+      top: 15%;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .display-2 {
+    font-size: 70px;
+
+      position: absolute;
+      top: 30%;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      left: 15%;
+  }
+br{
+  left:0%;
+}
+  .display-3 {
+    font-size: 70px;
+left: 1%;
+      position: absolute;
+      top: 45%;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  .btn-outline-dark {
+      position: absolute;
+      top: 70%;
+      left: 51%;
+    font-size: large;
+    background-color:darkgrey;
+  }
+
+  #logi {
+      position: absolute;
+      top: 79%;
+      font-size: 20px;
+      left: 10%;
+  }
+
+  #register {
+      position: absolute;
+      top: 79%;
+      font-size: 20px;
+      left: 20%;
+  }
+.bg{
+  background-size: auto;
+      background-repeat: no-repeat;
+      min-width: 100%;
+      margin-top: -70px;
+      position: absolute;
+      left: -100%;
+      right: -100%;
+      margin: auto;
+      top: 8%;
+  }
+</style>
+
+<div class="container">
+
+<img class="bg" src="assets/mallphoto.jpg">
+<div class="text-center">
+<h1 class="display-1">Welcome</h1>
+<h1 class="display-2">To</h1>
+<h1 class="display-3">United Online 
+  <br>
+Mega Mall</h1>
+<button (click)="btnclick()"*ngIf="! _loginservice.loggedIn()" aria-current="page" id="logi" button class="btn-outline-dark btn-light">Login</button>
+
+<button (click)="regclick()"*ngIf="! _loginservice.loggedIn()"  id="register" class="btn-outline-dark btn-light">Register</button>
+</div>  

@@ -1,0 +1,77 @@
+
+
+
+<!-- <div class="container">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>category</th>
+                <th>Price</th>
+                <th>plotDescription</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of Books">
+                <td>
+                    <img src={{item.photo}} height=100 width=100>
+                </td>
+                <td>
+                    {{item.name}}
+                </td>
+                <td>
+                    {{item.category}}
+                </td>
+                <td>
+                    {{item.price}}
+                </td>
+                <td>
+                    {{item.plotDescription}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+ -->
+ <html lang="en">
+
+<head>
+
+  <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
+
+</head>
+
+<body>
+  
+
+<button class="cart-btn" (click)="addcrt()">my cart</button>
+    <div class="container">
+  <div class="wrapper" *ngFor="let item of Books">
+    <div class="product-img">
+      <img src="{{item.photo}}" height="420" width="327">
+    </div>
+    <div class="product-info">
+      <div class="product-text">
+        <h1>{{item.name}}
+        </h1>
+        <h2>                    {{item.category}}
+        </h2>
+        <p>                     {{item.plotDescription}} 
+        </p>
+      <div class="product-price-btn">
+        <p>₹<span>{{item.price}}</span></p>
+        <button (click)="buy_api(item)" type="button">buy now</button>
+
+      </div>
+      <button id="but" (click)="addToCart(item)">addcart</button>
+
+      </div>
+
+    </div>
+  </div>
+    </div>
+</body>
+
+</html>

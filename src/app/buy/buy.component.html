@@ -1,0 +1,25 @@
+<div class="main">
+
+    
+    <form #BuyForm="ngForm" (ngSubmit)="buy_api(BuyForm.value)">
+       
+        <h1 style="color:white" >ShipmentDetails</h1><br>
+        <label for="buyersName"style="color:white">BuyersName</label><br>
+        <input type="text" id="Name" name=" buyersName" [(ngModel)]="user.buyersName" placeholder="Enter BuyersName"#buyername="ngModel" required><br>
+        <div class="error" *ngIf="buyername.errors?.minlength">Name should be atleast 4 characters.</div>
+        <div class="error"  *ngIf="buyername.touched && buyername.invalid">Username is required.</div>
+        <label for="age"style="color:white">Age</label><br>
+        <input type="number" id="Age" name="age" minlength="12" [(ngModel)]="user.age" placeholder="Enter age"#age="ngModel" required><br>
+        <div class="error" *ngIf="age.errors?.minlength">Age should be above 12 years.</div>
+        <div class="error"  *ngIf="age.touched && age.invalid">Age is required.</div>
+        <label for="addressDetails"style="color:white">AddressDetails</label><br>
+        <input type="text" id="Age" name="addressDetails" [(ngModel)]="user.addressDetails" placeholder="Enter Address"#addres="ngModel" required><br>
+        <div class="error"  *ngIf="addres.touched && addres.invalid">Address is required.</div>
+        <label for="mobileNumber"style="color:white">MobileNumber</label><br>
+        <input type="text" id="Name" name="mobileNumber" minlength="10" maxlength="10" [(ngModel)]="user.mobileNumber" placeholder="Enter MobileNumber"#mobile="ngModel" required><br>
+        <div class="error" *ngIf="mobile.errors?.minlength.maxlength">Mobile Number should be 10 characters.</div>
+        <div class="error"  *ngIf="mobile.touched && mobile.invalid">Mobile Number is required.</div>
+        <input type="submit" (click)="paymodes()" [disabled]="BuyForm.invalid"class="btn" style="background-color:green"  value="submit">
+
+    </form>
+</div>

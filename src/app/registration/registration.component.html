@@ -1,0 +1,17 @@
+<div>
+    <img class="bg" src="assets/regphoto.jpg">
+
+    <form #LoginForm="ngForm" (ngSubmit)="reg_api(LoginForm.value)">
+        <h1 style="color:white" >Registration</h1><br>
+
+        <label for="Name"style="color:white">UserName</label><br>
+        <input type="text" id="Name" name="loginId" [(ngModel)]="user.loginId" placeholder="Enter new UserName"#username="ngModel" required ><br>
+        <div class="error"  *ngIf="username.touched && username.invalid">Username is required.</div>
+
+        <label for="Password"style="color:white">Password</label><br>
+        <input type="text" id="Password" name="password" [(ngModel)]="user.password" placeholder="Enter new Password"#password="ngModel" required ><br>
+        <div class="error"  *ngIf="password.touched && password.invalid">Password is required.</div>
+
+        <input type="submit"[disabled]="LoginForm.invalid" class="btn" style="background-color:green"  value="submit">
+    </form>
+</div>

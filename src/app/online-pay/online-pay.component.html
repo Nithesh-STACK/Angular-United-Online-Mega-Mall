@@ -1,0 +1,78 @@
+<div>
+  
+    <img class="bg" src="assets/credit.jpg">
+   
+    <div *ngFor="let items of book">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!------ Include the above in your HEAD tag ---------->
+        
+        <div class="col-md-2 column productbox">
+            <img src="{{items.photo}}" class="img-responsive">
+            <div class="producttitle"style="color: ghostwhite;">{{items.name}}</div>
+            <div class="productprice"style="color: ghostwhite;"><div class="pricetext">{{items.price}} Rs</div></div>
+        </div>
+        </div>
+        <div *ngFor="let items of movie">
+            <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+            <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+            <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+            <!------ Include the above in your HEAD tag ---------->
+            
+            <div class="col-md-2 column productbox">
+                <img src="{{items.moviePoster}}" class="img-responsive">
+                <div class="producttitle"style="color: ghostwhite;">{{items.movieName}}</div>
+                <div class="productprice"style="color: ghostwhite;"><div class="pricetext">{{items.price}} Rs</div></div>
+            </div>
+            </div>
+     <div *ngFor="let items of chat">
+         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+         <!------ Include the above in your HEAD tag ---------->
+         
+         <div class="col-md-2 column productbox">
+             <img src="{{items.cimage}}" class="img-responsive">
+             <div class="producttitle"style="color: ghostwhite;">{{items.cname}}</div>
+             <div class="productprice"style="color: ghostwhite;"><div class="pull-right">{{items.cprice}} Rs</div></div>
+         </div>
+         </div>
+         <div *ngFor="let items of pro">
+             <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+             <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+             <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+             <!------ Include the above in your HEAD tag ---------->
+             
+             <div class="col-md-2 column productbox">
+                 <img src="{{items.productImage}}" class="img-responsive">
+                 <div class="producttitle"style="color: ghostwhite;">{{items.productname}}</div>
+                 <div class="productprice" style="color: ghostwhite;"><div class="pricetext">{{items.productprice}} Rs</div></div>
+             </div>
+           
+                </div>
+             </div>
+<form #PayForm="ngForm" (ngSubmit)="online_api(PayForm.value)">
+       
+    <h1 style="color:white" >PaymentGateway</h1><br>
+    <label for="CardHolderName"style="color:white">CardHolderName</label><br>
+    <input type="text" id="Name" name="cardHolderName" minlength="4" [(ngModel)]="user.cardHolderName" #names="ngModel" required placeholder="Enter CardHolder Name"><br>
+    <div class="error" *ngIf="names.errors?.minlength">Name should be atleast 4 characters.</div>
+        <div class="error"  *ngIf="names.touched && names.invalid">CardHolderName is required.</div>
+    <label for="debitCardNumber"style="color:white">DebitCardNumber</label><br>
+    <input type="text"  name="debitCardNumber" minlength="16" maxlength="16" [(ngModel)]="user.debitCardNumber" #debit="ngModel" required placeholder="Enter Debitcard Number"><br>
+    <div class="error" *ngIf="debit.errors?.minlength">DebitCardNumber should be  16 characters.</div>
+    <div class="error"  *ngIf="debit.touched && debit.invalid">Debit Card Number is required.</div>
+    <label for="ExpiryDate"style="color:white">ExpiryDate</label><br>
+    <input type="date"  name="expiryDate" [(ngModel)]="user.expiryDate" #age="ngModel" required placeholder="Enter ExpiryDate"><br>
+    <div class="error"  *ngIf="age.touched && age.invalid">Expiry Date is required.</div>
+
+    <label for="cvvPin"style="color:white">CvvPin</label><br>
+    <input type="password" id="Name" name="cvvPin" minlength="3" maxlength="3" [(ngModel)]="user.cvvPin" #cvv="ngModel" placeholder="Enter CvvPin"><br>
+    <div class="error" *ngIf="cvv.errors?.minlength.maxlength">Cvv should be 3 characters.</div>
+    <div class="error"  *ngIf="cvv.touched && cvv.invalid">Cvv Number is required.</div>
+    <input type="submit" [disabled]="PayForm.invalid" (click)="thanku()" class="btn" style="background-color:green"  value="submit">
+    <div class="card-columns">
+        <img src="/assets/master.png" />                <img src="/assets/visa.png" />  <img src="/assets/rupay.jpg" />
+    </div>
+</form>

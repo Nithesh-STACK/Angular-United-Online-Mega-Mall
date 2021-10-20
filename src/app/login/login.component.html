@@ -1,0 +1,49 @@
+
+<html>
+    <style>
+h1{
+    font-size: 20px;
+}
+        .bg{
+  background-size: auto;
+      background-repeat: no-repeat;
+      min-width: 100%;
+      margin-top: -70px;
+      position: absolute;
+      left: -100%;
+      right: -100%;
+      margin: auto;
+      top: 8%;
+  }
+    </style>
+    <body>
+<div class="container">
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;  
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+  
+<div class="container">
+    <img class="bg" src="assets/shopmall.jpg">
+
+    <form #LoginForm="ngForm" (ngSubmit)="post_api(LoginForm.value)">
+        <h1 style="color: whitesmoke;">Login to Continue Shopping</h1>
+
+        <label for="Name" style="color:white">Username</label><br>
+        <input type="text" id="u_name" name="name" minlength="4" maxlength="20"placeholder="Enter UserName" [(ngModel)]="login.name" #username="ngModel" required>
+        <div class="error" *ngIf="username.errors?.minlength">Username should be atleast 4 characters.</div>
+        <div class="error"  *ngIf="username.touched && username.invalid">Username is required.</div>
+        <label for="Password"style="color:white">Password</label><br>
+        <input type="password" id="u_pswd" name="password"placeholder="Enter Password" minlength="4" maxlength="20" [(ngModel)]="login.password" #password="ngModel" required>
+        <div class="error" *ngIf="password.errors?.minlength">Password should be atleast 4 characters.</div>
+        <div class="error"  *ngIf="password.touched && password.invalid">Password is required.</div>
+       <input type="submit" [disabled]="LoginForm.invalid"class="btn" style="background-color: cadetblue;"  value="Login">
+       <input type="submit"  (click)="regclick()"class="btn" style="background-color:#c83349;"  value="Register">
+
+    </form>
+</div>
+</div>
+    </body>
+</html>
