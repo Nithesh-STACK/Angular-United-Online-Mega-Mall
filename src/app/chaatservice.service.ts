@@ -10,7 +10,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 export class ChaatserviceService {
   constructor(private http:HttpClient) { }
 
-  req:string="https://teameight.azurewebsites.net/api/Menu";
+  req:string="https://localhost:44391/api/Menu";
 
  //Method to get the list of all players from the API.
  getAllUsers():Observable<chaats[]>
