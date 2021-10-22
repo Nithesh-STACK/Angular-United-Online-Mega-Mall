@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class ProductService {
   constructor(private http:HttpClient) { }
   //Variable to store the request URL for accessing API.
-  req:string="https://firstprojectapi.azurewebsites.net//api/ProductsBooking/team8";
+  req:string="https://localhost:44387/api/ProductsBooking";
 
   
   //Method to get the list of all players from the API.
