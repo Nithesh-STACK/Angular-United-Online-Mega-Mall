@@ -7,7 +7,8 @@ import { Booking } from './Model/Booking';
 })
 export class MoviesService {
   constructor(private http:HttpClient) { }
-  req:string="https://ticketbooking.azurewebsites.net/api/Booking";
+  req:string="https://localhost:44303/api/Booking";
+  
   getAllUsers():Observable<Booking[]>
   {
     return this.http.get<Booking[]>(this.req);
