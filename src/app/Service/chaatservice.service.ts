@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { chaats } from './Model/chaats';
+import { chaats } from '../Model/chaats';
 import { Observable,throwError } from 'rxjs';
 import {catchError} from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
@@ -10,7 +10,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 export class ChaatserviceService {
   constructor(private http:HttpClient) { }
 
-  req:string="https://teameight.azurewebsites.net/api/Menu";
+  req:string="https://localhost:44391/api/Menu";
 
  //Method to get the list of all players from the API.
  getAllUsers():Observable<chaats[]>

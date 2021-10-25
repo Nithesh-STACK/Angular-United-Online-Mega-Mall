@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { chaats } from '../Model/chaats';
-import { ChaatserviceService } from '../chaatservice.service';
-import { AddCartService } from '../add-cart.service';
-import { OnlineServiceService } from '../online-service.service';
+import { ChaatserviceService } from '../Service/chaatservice.service';
+import { AddCartService } from '../Service/add-cart.service';
+import { OnlineServiceService } from '../Service/online-service.service';
 @Component({
   selector: 'app-chaat',
   templateUrl: './chaat.component.html',

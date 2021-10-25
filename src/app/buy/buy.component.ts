@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ShipmentDetail } from '../Model/ShipmentDetail';
-import { BuyService } from '../buy.service';
+import { BuyService } from '../Service/buy.service';
 import { Router,ActivatedRoute } from '@angular/router';
-import { AddCartService } from '../add-cart.service';
+import { AddCartService } from '../Service/add-cart.service';
 @Component({
   selector: 'app-buy',
   templateUrl: './buy.component.html',

@@ -4,9 +4,10 @@ import { Book } from 'src/app/Model/Book';
 import { BookService } from '../Service/Book.service';
 import { Router,ActivatedRoute } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { BuyService } from '../buy.service';
-import { AddCartService } from '../add-cart.service';
-import { OnlineServiceService } from '../online-service.service';
+import { BuyService } from '../Service/buy.service';
+import { AddCartService } from '../Service/add-cart.service';
+import { OnlineServiceService } from '../Service/online-service.service';
+import { AddCart } from '../Model/AddCart';
 @Component({
   selector: 'app-Book-data',
   templateUrl: './Book-data.component.html',
@@ -72,7 +73,42 @@ addcrt(){
         this.cart.addToCart(book);
         window.alert('Your product has been added to the cart!');
   }
+  // post_api(id:number,photo:string,name:string,plotDescription:string,price:number):void{
+    
+  //   // console.log(Number(uid));
+  //   // console.log(id,img,name,pdesc,pprice)
+  //   // this.postproduct.cartid=0;
+  //   // const amt=this.total;
+     
+    
+  //   this.postproduct.id=id;
+  //   this.postproduct.photo=photo;
+  //   this.postproduct.name=name;
+  //   this.postproduct.plotDescription=plotDescription;
+  //   this.postproduct.price=price;
+    
+   
+  //   // const amt=this.total;
+     
+  //   // sessionStorage.setItem("total",amt.toString());
+  //   console.log(this.postproduct);
   
+  //   this.cart.getcartbyid(this.postproduct).subscribe(data=>
+  //     {
+        
+        
+  //     });
+  //   window.alert('Your product has been added to the cart!');
+
+  // }
+  // postproduct:AddCart={
+  //   id: 0,
+  //   name: "",
+  //   category: "",
+  //   price: 0,
+  //   photo: "",
+  //   plotDescription: "",
+  // };
 
 
 }

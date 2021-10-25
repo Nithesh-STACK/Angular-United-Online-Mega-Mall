@@ -14,7 +14,7 @@ export class BookService
   //Creating an instance of HttpClient inside the constructor.
   constructor(private http:HttpClient) { }
   //Variable to store the request URL for accessing API.
-  req:string="https://team8.azurewebsites.net/api/Books";
+  req:string="https://localhost:44392/api/Books";
 
   
   //Method to get the list of all players from the API.

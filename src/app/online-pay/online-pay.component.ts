@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OnlinePay } from '../Model/OnlinePay'; 
-import { OnlineServiceService } from '../online-service.service'; 
+import { OnlineServiceService } from '../Service/online-service.service'; 
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-online-pay',

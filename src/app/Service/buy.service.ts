@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ShipmentDetail } from './Model/ShipmentDetail';
+import { ShipmentDetail } from '../Model/ShipmentDetail';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({

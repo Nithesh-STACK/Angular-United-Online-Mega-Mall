@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Booking } from '../Model/Booking';
-import { MoviesService } from '../movies.service';
+import { MoviesService } from '../Service/movies.service';
 import { Router } from '@angular/router';
-import { OnlineServiceService } from '../online-service.service';
+import { OnlineServiceService } from '../Service/online-service.service';
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',

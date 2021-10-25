@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AddCartService } from '../add-cart.service';
+import { AddCartService } from '../Service/add-cart.service';
 import { BookDataComponent } from '../Book-data/Book-data.component';
 import { AddCart } from '../Model/AddCart';
 import { Book } from '../Model/Book';
@@ -27,18 +27,20 @@ export class AddCartComponent implements OnInit {
   item = this.obj.getItems();
   chat=this.obj.getchat();
   pro=this.obj.getpro();
-  clearCart(item:Book) {
-    this.item = [];
-    return this.item;
+  clearCart(items:Book) {
+     this.obj.clearCart(items);
   }
   clearchat(chat:chaats){
-    this.chat=[];
-    return this.chat;
+    this.obj.clearChat(chat);
+
   }
   clearpro(pro:products){
-    this.pro=[];
-    return this.pro;
+    this.obj.clearPro(pro);
+
   }
+  a:number=0;
+
+ 
   buy_api():void
   {
     
