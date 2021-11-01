@@ -32,7 +32,12 @@ export class loginComponent implements OnInit {
         localStorage.setItem("jwt",token);     
         sessionStorage.setItem('user',login.name) ;
         this.router.navigate(['/cat']);
-      })
+      },
+        (error) => {                              //Error callback
+        window.alert("Invalid Username and Password");
+
+      }                            
+      )
   }
   
  
